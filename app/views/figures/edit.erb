@@ -6,7 +6,11 @@
 
   <p>Title:<br>
   <% Title.all.each do |title| %>
-    <input type="checkbox" id="title_<%= title.id %>" value="<%= title.id %>" name="figure[title_ids][]"<%= 'checked' if @figure.titles.include?(title) %>>
+    <input type="checkbox"
+      id="title_<%= title.id %>" 
+      value="<%= title.id %>"
+      name="figure[title_ids][]"
+      <%= 'checked' if @figure.titles.include?(title) %>>
     <%= title.name %>
   <% end %>
   <p>Add New Title:<br>
